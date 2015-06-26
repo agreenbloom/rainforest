@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :products
+  resources :products do
+    resources :reviews, only: [:show, :create, :destroy]
+  end
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
 
@@ -58,4 +60,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
