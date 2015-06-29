@@ -1,3 +1,23 @@
-// Place all the styles related to the useres controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.oc{
+  padding-top:120px;
+}
+
+.container{
+  width: 70%;
+  height: 50%;
+  text-align: center;
+  border-style: ridge;
+  margin: auto;
+
+  h1{
+    font-size: 50px;
+    color: rgb(6, 106, 117);
+    padding: 12px 0 5px 0;
+    font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: double;
+  }
+
+}
