@@ -74,5 +74,22 @@ header{
   background: #333333;
   text-decoration: none;
   }
+
 }
 
+.navcontainer{
+  position: relative;
+}
+
+.navright{
+  position: absolute;
+  float: right;
+  right:0;
+}
+
+.navproduct{
+  position: absolute;
+  float: left;
+  left:0;
+  height: 10px;
+}
