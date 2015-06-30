@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     @review.user = current_user
 
     if @review.save
-      redirect_to products_path, notice: 'Review created successfully'
+      redirect_to @product, notice: 'Review created successfully'
     else
       render 'products/show'
     end
@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
   end
 
   def load_product
-    @product = Product.find(params[:products_id])
+    @product = Product.find(params[:product_id])
 
   end
 end
