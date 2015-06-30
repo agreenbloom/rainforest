@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'welcome#index'
+
   resources :products do
     resources :reviews, only: [:show, :create, :destroy]
   end
