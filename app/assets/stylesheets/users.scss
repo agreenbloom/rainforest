@@ -1,23 +1,59 @@
-.oc{
-  padding-top:120px;
+h1{
+  text-align: center;
+  color: rgb(6, 106, 117);
+  border-bottom: solid;
+  border-color: rgb(6,106,117);
+  padding-top: 20px;
+  font-family: 'FranchiseRegular','Arial bold',Arial,sans-serif;
+
 }
 
+
 .container{
-  width: 70%;
-  height: 50%;
-  text-align: center;
-  border-style: ridge;
-  margin: auto;
+  width: 85%;
+  margin:0 auto;
+  background-color: #EDF4F5;
+  border: ridge;
+
+
+  form{
+    display: block;
+    margin: 0;
+    padding: 2em;
+    text-align: left;
+  }
+
+  label{
+    display: inline;
+    width: 25%;
+    font-size: 20px;
+    padding-bottom: 1px;
+  }
 
   h1{
     font-size: 50px;
     color: rgb(6, 106, 117);
     padding: 12px 0 5px 0;
-    font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+    font-family: 'FranchiseRegular',Arial,sans-serif;
     font-weight: bold;
     text-align: center;
     padding-bottom: 20px;
     border-bottom: double;
+  }
+  input, textarea{
+    display: inline-block;
+    font-size: 15px;
+    width: 100%;
+    border: #789A9F;
+    line-height: 2;
+    border: groove 1.5px;
+
+  }
+  .field{
+    margin-bottom: 1em;
+    font-family:'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+    font-size: 20px;
+
   }
 
 }

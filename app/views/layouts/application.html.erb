@@ -9,14 +9,18 @@
 <body>
   <header>
       <nav class = "navbar">
+      <div class="navcontainer"
+        <div class="navproduct">
         <%= link_to 'Products', products_path  %>
-      <!-- </div>
-      <div class= "fright"> -->
-      <% if current_user %>
-        Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
-      <% else %>
-        <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-      <% end %>
+        </div>
+        <div class= "navright">
+        <% if current_user %>
+         Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+        <% else %>
+         <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+        <% end %>
+       </div>
+      </div>
       </nav>
   </header>
 
