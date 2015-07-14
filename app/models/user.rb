@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
 
-  before_save :name_user
+  # before_save :name_user
 
   private
   def format_name

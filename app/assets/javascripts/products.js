@@ -3,17 +3,19 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-$(document).on('ready', function(){
-
-
-  $('#search-form').on('submit'), function(e){
-    e.preventDefault();
+ $(document).on('ready page:load', function() {
+  $('#search-form').submit(function(event) {
+    event.preventDefault();
     var searchValue = $('#search').val();
 
     $.getScript('/products?search=' + searchValue);
-
-      complete: function(){
-
-      }),
   });
-})
+
+   $(window).scroll(function() {
+     var url = $('.pagination span.next').children().attr('href');
+     if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 50) {
+        $('.pagination').text("Fetching more products...");
+        return $.getScript(url);
+      }
+   });
+});
