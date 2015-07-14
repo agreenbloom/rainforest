@@ -3,8 +3,21 @@ class ProductsController < ApplicationController
 
 
   def index
-    @products = Product.all
+    @products = if params[:search]
+       Product.where("Lower(name) LIKE LOWER(?)", "%#{params[:search]}%")
+      # only for postgres
+      # @products = Product.where("name ILIKE ?", "%#{params[:search]}%")
+    else
+      Product.all
+    end
+
+     respond_to do |format|
+      format.html
+      format.js
+    end
   end
+
+
 
   def show
     @product = Product.find(params[:id])
